@@ -1,0 +1,35 @@
+{
+  "name": "B",
+  "fields": [
+    {
+      "fieldName": "appName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "appIcon",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "a",
+      "otherEntityRelationshipName": "b",
+      "relationshipName": "a"
+    }
+  ],
+  "entityTableName": "b",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["myApp", "myApp1"],
+  "microserviceName": "myApp1",
+  "clientRootFolder": "myApp1",
+  "databaseType": "sql",
+  "changelogDate": "20211206022613"
+}

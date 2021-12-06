@@ -1,0 +1,54 @@
+
+application {
+  config {
+    baseName myApp,
+    applicationType gateway,
+    packageName com.myapp,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework react
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName myApp1,
+    applicationType microservice,
+    packageName com.myapp,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+  }
+  entities A, B
+}
+
+application {
+  config {
+    baseName myApp2,
+    applicationType microservice,
+    packageName com.easthope.oauth2,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+  }
+  entities C
+}
+
+entity A {
+ orderNo Integer required min(42) max(42),
+ name String,
+ code String
+}
+
+entity B {
+ appName String,
+ appIcon ImageBlob
+}
+
+entity C {}
+
+entity D {}
+
+relationship OneToMany {
+  A to B
+}
+    
